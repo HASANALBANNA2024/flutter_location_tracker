@@ -1,0 +1,25 @@
+name: real_time_location_tracker
+description: Flutter app with flutter_map (OpenStreetMap) and Geolocator - live location, marker info window and polyline tracking. No API key needed.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # ম্যাপ দেখানোর জন্য (OpenStreetMap) - একদম ফ্রি, কোনো API key / billing লাগে না
+  flutter_map: ^8.3.2
+  # LatLng class এই package থেকে আসে (flutter_map এটা ব্যবহার করে)
+  latlong2: ^0.10.1
+  # GPS location আর permission-এর জন্য
+  geolocator: ^14.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
