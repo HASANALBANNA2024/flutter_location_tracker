@@ -19,10 +19,10 @@ class AppConstants {
   static const double minZoom = 3;
   static const double maxZoom = 19;
 
-  /// Camera smooth
+
   static const Duration cameraAnimationDuration = Duration(milliseconds: 800);
 
-  /// OpenStreetMap
+
   static const String tileUrlTemplate =
       'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 
@@ -43,7 +43,7 @@ class AppConstants {
   static const Color markerColor = Colors.red;
   static const double markerIconSize = 44;
 
-  /// Marker-
+
   static const double markerWidth = 240;
   static const double markerHeight = 130;
 }

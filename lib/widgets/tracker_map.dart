@@ -42,6 +42,7 @@ class TrackerMap extends StatelessWidget {
         initialZoom: AppConstants.defaultZoom,
         minZoom: AppConstants.minZoom,
         maxZoom: AppConstants.maxZoom,
+
         interactionOptions: const InteractionOptions(
           flags: InteractiveFlag.all & ~InteractiveFlag.rotate,
         ),
@@ -49,7 +50,6 @@ class TrackerMap extends StatelessWidget {
         onTap: (tapPosition, point) => onMapTap(),
       ),
       children: [
-
         TileLayer(
           urlTemplate: AppConstants.tileUrlTemplate,
           userAgentPackageName: AppConstants.userAgentPackageName,
@@ -68,6 +68,7 @@ class TrackerMap extends StatelessWidget {
             ],
           ),
 
+
         if (pos != null)
           MarkerLayer(
             markers: [
@@ -75,6 +76,7 @@ class TrackerMap extends StatelessWidget {
                 point: pos,
                 width: AppConstants.markerWidth,
                 height: AppConstants.markerHeight,
+
                 alignment: Alignment.topCenter,
                 child: LocationMarker(
                   showInfo: showInfo,

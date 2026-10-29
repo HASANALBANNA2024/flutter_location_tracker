@@ -11,7 +11,7 @@ import '../utils/smooth_map_mover.dart';
 
 class TrackerController extends ChangeNotifier {
   TrackerController({
-    required TickerProvider vsync, 
+    required TickerProvider vsync,
     LocationService? service,
   }) : _service = service ?? LocationService() {
     _mover = SmoothMapMover(vsync: vsync, mapController: mapController);
@@ -43,19 +43,21 @@ class TrackerController extends ChangeNotifier {
   bool get loading => _loading;
   bool get showInfo => _showInfo;
 
+
+
   void onMapReady() {
     _mapReady = true;
     final pos = _current;
     if (pos != null) _animateTo(pos);
   }
 
-  /// Marker-
+
   void toggleInfo() {
     _showInfo = !_showInfo;
     _notify();
   }
 
-  /// Map-
+
   void hideInfo() {
     if (!_showInfo) return;
     _showInfo = false;
@@ -148,7 +150,7 @@ class TrackerController extends ChangeNotifier {
   void dispose() {
     _disposed = true;
     _timer?.cancel();
-    _mover.dispose(); //  animation  map controller
+    _mover.dispose();
     mapController.dispose();
     super.dispose();
   }

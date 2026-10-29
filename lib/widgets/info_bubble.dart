@@ -16,7 +16,6 @@ class InfoBubble extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        // মূল বাবল
         Material(
           elevation: 4,
           color: Colors.white,
@@ -43,7 +42,6 @@ class InfoBubble extends StatelessWidget {
             ),
           ),
         ),
-
         const Icon(Icons.arrow_drop_down, color: Colors.white, size: 24),
       ],
     );

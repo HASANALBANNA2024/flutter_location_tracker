@@ -14,7 +14,6 @@ class TrackerScreen extends StatefulWidget {
   State<TrackerScreen> createState() => _TrackerScreenState();
 }
 
-
 class _TrackerScreenState extends State<TrackerScreen>
     with SingleTickerProviderStateMixin {
   late final TrackerController _controller;

@@ -28,6 +28,7 @@ class SmoothMapMover {
   double _fromZoom = AppConstants.defaultZoom;
   double _toZoom = AppConstants.defaultZoom;
 
+
   void moveTo(LatLng target, double zoom) {
     final camera = _map.camera;
 
@@ -42,7 +43,6 @@ class SmoothMapMover {
 
 
   void _onTick() {
-
     final t = Curves.easeInOut.transform(_animation.value);
 
     final lat = _lerp(_fromCenter.latitude, _toCenter.latitude, t);
@@ -51,7 +51,6 @@ class SmoothMapMover {
 
     _map.move(LatLng(lat, lng), zoom);
   }
-
 
   double _lerp(double a, double b, double t) => a + (b - a) * t;
 

@@ -26,7 +26,6 @@ class LocationMarker extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Align(
-
         alignment: Alignment.bottomCenter,
         child: Column(
           mainAxisSize: MainAxisSize.min,
